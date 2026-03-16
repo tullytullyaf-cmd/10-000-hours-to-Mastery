@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Mastery Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 20px; margin: 0; }
+        .container { background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 500px; }
+        h1 { text-align: center; color: #333; margin-top: 0; }
+        
+        /* Setup Area */
+        .setup-area { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+        input[type="text"], input[type="number"] { padding: 12px; border: 1px solid #ddd; border-radius: 8px; flex-grow: 1; font-size: 16px; }
+        input[type="color"] { border: none; width: 45px; height: 45px; cursor: pointer; background: none; }
+        
+        button { padding: 10px 15px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.2s; font-size: 14px; }
+        .btn-create { background: #333; color: white; flex-grow: 1; }
+        .btn-add { background: #333; color: white; }
+
+        /* Skill Cards */
+        .skill-card { background: #fff; padding: 15px; border-radius: 12px; margin-bottom: 15px; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .progress-bg { background: #e0e0e0; height: 14px; border-radius: 7px; margin: 12px 0; overflow: hidden; }
+        .progress-fill { height: 100%; width: 0%; transition: width 0.6s cubic-bezier(0.1, 0.7, 1.0, 0.1); }
+        .skill-header { display: flex; justify-content: space-between; align-items: center; }
+        .controls { display: flex; gap: 8px; margin-top: 10px; align-items: center; }
+        
+        .footer-tools { margin-top: 20px; text-align: center; border-top: 1px solid #eee; padding-top: 15px; }
+        .export-btn { background: none; color: #888; font-size: 12px; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Mastery Tracker</h1>
+    
+    <div class="setup-area">
+        <input type="text" id="new-skill-name" placeholder="Skill Name (e.g. Spanish)">
+        <input
